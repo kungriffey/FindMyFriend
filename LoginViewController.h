@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController
+//Create custom protocol
+@protocol LoginViewControllerDelegate <NSObject>
+
+
+@end
+@interface LoginViewController : UIViewController <UITextFieldDelegate>
+@property (strong, nonatomic) IBOutlet UITextField *userNameTextField;
+
 
 @end
