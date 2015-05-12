@@ -23,6 +23,8 @@
   [self.usernameTextField becomeFirstResponder];
 }
 
+
+
 #pragma mark UITextFieldDelegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -38,6 +40,31 @@
   }
   
   return YES;
+}
+
+
+
+#pragma mark IBActions
+
+- (IBAction)createUserButtonPressed:(UIButton *)sender {
+  [self dismissKeyboard];
+  [self processFieldEntries];
+}
+
+- (void)processFieldEntries {
+  // Check that we have a non-zero username and passwords.
+  // Compare password and retryPassword for equality
+  // Throw up a dialog that tells them what they did wrong if they did it wrong.
+  
+  
+  
+}
+
+
+#pragma mark Keyboard
+
+- (void)dismissKeyboard {
+  [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning {
