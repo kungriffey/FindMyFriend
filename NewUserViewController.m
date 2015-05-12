@@ -23,6 +23,23 @@
   [self.usernameTextField becomeFirstResponder];
 }
 
+#pragma mark UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  if (textField == self.usernameTextField) {
+    [self.passwordTextField becomeFirstResponder];
+  }
+  if (textField == self.passwordTextField) {
+    [self.passwordTextField becomeFirstResponder];
+  }
+  if (textField == self.retypePasswordTextField) {
+    [self.retypePasswordTextField resignFirstResponder];
+    [self processFieldEntries];
+  }
+  
+  return YES;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
