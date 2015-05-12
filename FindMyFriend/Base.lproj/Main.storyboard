@@ -31,6 +31,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="newUserButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Wu8-46-WJ6"/>
                                     <segue destination="yMb-Fp-b9P" kind="push" id="oUo-sz-wvu"/>
                                 </connections>
                             </button>
@@ -40,11 +41,15 @@
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GHF-vd-5j2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="passwordTextField" destination="yGq-Fd-voS" id="8iM-aW-UTK"/>
                         <outlet property="userNameTextField" destination="kvq-f0-rgS" id="w6V-UE-jxe"/>
                     </connections>
                 </viewController>
@@ -55,7 +60,7 @@
         <!--New User-->
         <scene sceneID="s2y-le-a73">
             <objects>
-                <viewController id="8Cm-yA-mGn" sceneMemberID="viewController">
+                <viewController id="8Cm-yA-mGn" customClass="NewUserViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sdt-Q7-jWx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,6 +89,9 @@
                                 <state key="normal" title="Create User!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createUserButtonPressed:" destination="8Cm-yA-mGn" eventType="touchUpInside" id="PhO-v8-uMX"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-type Password" minimumFontSize="17" id="OhY-BB-1MZ">
                                 <rect key="frame" x="16" y="269" width="288" height="30"/>
@@ -95,6 +103,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New User" id="1Ng-xl-Lhh"/>
+                    <connections>
+                        <outlet property="fullnameTextField" destination="jgg-d0-Qxm" id="cab-rc-Hkl"/>
+                        <outlet property="passwordTextField" destination="Hau-cm-e2Z" id="9Pn-p5-Bpx"/>
+                        <outlet property="retypePasswordTextField" destination="OhY-BB-1MZ" id="LaJ-ij-yNr"/>
+                        <outlet property="usernameTextField" destination="beT-7i-9ah" id="YqK-qU-Skd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pci-3F-e31" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

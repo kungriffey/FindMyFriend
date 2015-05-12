@@ -34,4 +34,9 @@
 }
 */
 
+- (IBAction)loginButtonPressed:(UIButton *)sender {
+}
+
+- (IBAction)newUserButtonPressed:(UIButton *)sender {
+}
 @end

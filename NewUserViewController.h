@@ -10,4 +10,11 @@
 
 @interface NewUserViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *fullnameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *usernameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (strong, nonatomic) IBOutlet UITextField *retypePasswordTextField;
+
+- (IBAction)createUserButtonPressed:(UIButton *)sender;
+
 @end
