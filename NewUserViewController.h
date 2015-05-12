@@ -8,7 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+//Tell the compiler that that the current class exists
+@class NewUserViewController;
+
+//Create a new protocol
+@protocol NewUserViewControllerDelegate <NSObject>
+
+- (void)newUserViewControllerDidSignup:(NewUserViewController *)controller;
+
+@end
+
 @interface NewUserViewController : UIViewController
+
+//custom Delegate
+@property (weak, nonatomic) id <NewUserViewControllerDelegate> delegate;
 
 @property (strong, nonatomic) IBOutlet UITextField *fullnameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *usernameTextField;
