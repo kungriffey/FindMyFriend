@@ -99,18 +99,10 @@
 		2A402E061B0255530033BFB5 = {
 			isa = PBXGroup;
 			children = (
-				2AFD37BB1B02579A00C7D1B1 /* libz.1.1.3.dylib */,
-				2AFD37B91B02578F00C7D1B1 /* libsqlite3.dylib */,
-				2AFD37B71B02578100C7D1B1 /* CFNetwork.framework */,
-				2AFD37B51B02577B00C7D1B1 /* AudioToolbox.framework */,
-				2AFD37B31B02577200C7D1B1 /* SystemConfiguration.framework */,
-				2AFD37B11B02576B00C7D1B1 /* StoreKit.framework */,
-				2AFD37AF1B02573A00C7D1B1 /* Security.framework */,
-				2AFD37AD1B02573200C7D1B1 /* MobileCoreServices.framework */,
-				2AFD37AB1B02572500C7D1B1 /* CoreGraphics.framework */,
-				2AFD37A91B02572000C7D1B1 /* CoreLocation.framework */,
-				2A402E561B0256820033BFB5 /* Bolts.framework */,
-				2A402E571B0256820033BFB5 /* Parse.framework */,
+				2AFD37C01B0257E700C7D1B1 /* Controller */,
+				2AFD37BF1B0257E000C7D1B1 /* View */,
+				2AFD37BE1B0257DC00C7D1B1 /* Model */,
+				2AFD37BD1B0257CE00C7D1B1 /* Frameworks */,
 				2A402E111B0255530033BFB5 /* FindMyFriend */,
 				2A402E2B1B0255530033BFB5 /* FindMyFriendTests */,
 				2A402E101B0255530033BFB5 /* Products */,
@@ -165,6 +157,46 @@
 				2A402E2D1B0255530033BFB5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2AFD37BD1B0257CE00C7D1B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2AFD37BB1B02579A00C7D1B1 /* libz.1.1.3.dylib */,
+				2AFD37B91B02578F00C7D1B1 /* libsqlite3.dylib */,
+				2AFD37B71B02578100C7D1B1 /* CFNetwork.framework */,
+				2AFD37B51B02577B00C7D1B1 /* AudioToolbox.framework */,
+				2AFD37B31B02577200C7D1B1 /* SystemConfiguration.framework */,
+				2AFD37B11B02576B00C7D1B1 /* StoreKit.framework */,
+				2AFD37AF1B02573A00C7D1B1 /* Security.framework */,
+				2AFD37AD1B02573200C7D1B1 /* MobileCoreServices.framework */,
+				2AFD37AB1B02572500C7D1B1 /* CoreGraphics.framework */,
+				2AFD37A91B02572000C7D1B1 /* CoreLocation.framework */,
+				2A402E561B0256820033BFB5 /* Bolts.framework */,
+				2A402E571B0256820033BFB5 /* Parse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2AFD37BE1B0257DC00C7D1B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2AFD37BF1B0257E000C7D1B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2AFD37C01B0257E700C7D1B1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
