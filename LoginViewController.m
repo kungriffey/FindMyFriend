@@ -20,8 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-  UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                         action:@selector(dismissKeyboard)];
+  UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
   tapGestureRecognizer.cancelsTouchesInView = NO;
   [self.view addGestureRecognizer:tapGestureRecognizer];
   
@@ -29,8 +28,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  
-  [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,7 +61,7 @@
 }
 
 - (IBAction)newUserButtonPressed:(UIButton *)sender {
-  [self presentNewUserViewController];
+//  [self presentNewUserViewController];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -82,9 +79,9 @@
 #pragma mark NewUserViewController
 
 - (void)presentNewUserViewController {
-  NewUserViewController *viewController = [[NewUserViewController alloc] initWithNibName:nil bundle:nil];
-  viewController.delegate = self;
-  [self.navigationController presentViewController:viewController animated:YES completion:nil];
+//  NewUserViewController *viewController = [[NewUserViewController alloc] initWithNibName:nil bundle:nil];
+//  viewController.delegate = self;
+//  [self.navigationController pushViewController:viewController animated:YES];
 }
 
 #pragma mark Delegate
@@ -151,12 +148,14 @@
     // Tear down the activity view in all cases.
     
     if (user) {
-      [self.delegate loginViewControllerDidLogin:self];
+      //[self.delegate loginViewControllerDidLogin:self];
+      [self performSegueWithIdentifier:@"loginVC" sender:nil];
     } else {
       // Didn't get a user.
       NSLog(@"%s didn't get a user!", __PRETTY_FUNCTION__);
       
       NSString *alertTitle = nil;
+      
       
       if (error) {
         // Something else went wrong

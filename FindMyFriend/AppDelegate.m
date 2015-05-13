@@ -28,9 +28,6 @@
   // Parse initialization
   [Parse setApplicationId:@"iTTRL8mKc9JszZhv9LyIClrGVR0zd2U3EoWOiwe4" clientKey:@"6fEWKJ6osKEx5v5zRwUHh2foe8q6B9eV5UrYv0ox"];
   // ****************************************************************************
-  UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-  LoginViewController *loginViewController = [storyBoard instantiateViewControllerWithIdentifier:@"loginVC"];
-  self.navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
   
   if ([PFUser currentUser]) {
     // Present wall straight-away
@@ -38,10 +35,6 @@
   }
   
   [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-  
-  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  self.window.rootViewController = self.navigationController;
-  [self.window makeKeyAndVisible];
   
 //  [[PAWConfigManager sharedManager] fetchConfigIfNeeded];
   
