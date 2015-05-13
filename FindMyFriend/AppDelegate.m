@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "LoginViewController.h"
+
 
 #import "NewUserViewController.h"
 
@@ -24,12 +26,44 @@
   
   // ****************************************************************************
   // Parse initialization
-  [Parse setApplicationId:@"nzpmaVbhNLGp2rhH9Ns8OA5yYPhd6vA8LfIQ9p8R" clientKey:@"t5ymexXqu6arbgI1BdU8gogtDd3hSxmudCHxqccN"];
+  [Parse setApplicationId:@"iTTRL8mKc9JszZhv9LyIClrGVR0zd2U3EoWOiwe4" clientKey:@"6fEWKJ6osKEx5v5zRwUHh2foe8q6B9eV5UrYv0ox"];
   // ****************************************************************************
-
+  UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+  LoginViewController *loginViewController = [storyBoard instantiateViewControllerWithIdentifier:@"loginVC"];
+  self.navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+  
+  if ([PFUser currentUser]) {
+    // Present wall straight-away
+//    [self presentWallViewControllerAnimated:NO];
+  }
+  
+  [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+  
+  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  self.window.rootViewController = self.navigationController;
+  [self.window makeKeyAndVisible];
+  
+//  [[PAWConfigManager sharedManager] fetchConfigIfNeeded];
   
   return YES;
 }
+
+#pragma mark LoginViewController
+
+#pragma mark Delegate
+
+- (void)loginViewControllerDidLogin:(LoginViewController *)controller {
+//  [self presentWallViewControllerAnimated:YES];
+}
+
+#pragma mark WallViewController
+
+//- (void)presentWallViewControllerAnimated:(BOOL)animated {
+//  PAWWallViewController *wallViewController = [[PAWWallViewController alloc] initWithNibName:nil bundle:nil];
+//  wallViewController.delegate = self;
+//  [self.navigationController setViewControllers:@[ wallViewController ] animated:animated];
+//}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
   // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
