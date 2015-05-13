@@ -32,7 +32,7 @@
                                 </state>
                                 <connections>
                                     <action selector="newUserButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Wu8-46-WJ6"/>
-                                    <segue destination="yMb-Fp-b9P" kind="push" id="oUo-sz-wvu"/>
+                                    <segue destination="yMb-Fp-b9P" kind="push" identifier="NewUser" id="oUo-sz-wvu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jCg-rl-a66">

@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+
+#import "NewUserViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +19,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  
   // Override point for customization after application launch.
+  
+  // ****************************************************************************
+  // Parse initialization
+  [Parse setApplicationId:@"nzpmaVbhNLGp2rhH9Ns8OA5yYPhd6vA8LfIQ9p8R" clientKey:@"t5ymexXqu6arbgI1BdU8gogtDd3hSxmudCHxqccN"];
+  // ****************************************************************************
+
+  
   return YES;
 }
 
