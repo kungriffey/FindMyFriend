@@ -7,6 +7,8 @@
 //
 
 #import "NewUserViewController.h"
+#import <Parse/Parse.h>
+#import "ActivityView.h"
 
 @interface NewUserViewController ()
 
@@ -105,6 +107,35 @@
     [alertView show];
     return;
   }
+  // Call into an object somewhere that has code for setting up a user.
+  // The app delegate cares about this, but so do a lot of other objects.
+  // For now, do this inline.
+  
+  PFUser *user = [PFUser user];
+  user.username = username;
+  user.password = password;
+  [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    if (error) {
+      UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[error userInfo][@"error"]
+                                                          message:nil
+                                                         delegate:self
+                                                cancelButtonTitle:nil
+                                                otherButtonTitles:@"OK", nil];
+      [alertView show];
+      [ActivityView.activityIndicator stopAnimating];
+      [ActivityView removeFromSuperview];
+      // Bring the keyboard back up, because they'll probably need to change something.
+      [self.usernameTextField becomeFirstResponder];
+      return;
+    }
+    
+    // Success!
+    [ActivityView.activityIndicator stopAnimating];
+    [ActivityView removeFromSuperview];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.delegate newUserViewControllerDidSignup:self];
+  }];
 
   
 }

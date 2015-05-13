@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A143A181B02B0C300EB14C2 /* ActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A143A171B02B0C300EB14C2 /* ActivityView.m */; };
 		2A402E151B0255530033BFB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A402E141B0255530033BFB5 /* main.m */; };
 		2A402E181B0255530033BFB5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A402E171B0255530033BFB5 /* AppDelegate.m */; };
 		2A402E1B1B0255530033BFB5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A402E1A1B0255530033BFB5 /* ViewController.m */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A143A161B02B0C300EB14C2 /* ActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityView.h; sourceTree = "<group>"; };
+		2A143A171B02B0C300EB14C2 /* ActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityView.m; sourceTree = "<group>"; };
 		2A402E0F1B0255530033BFB5 /* FindMyFriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMyFriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A402E131B0255530033BFB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A402E141B0255530033BFB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -208,6 +211,8 @@
 		2AFD37BF1B0257E000C7D1B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2A143A161B02B0C300EB14C2 /* ActivityView.h */,
+				2A143A171B02B0C300EB14C2 /* ActivityView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AFD37C31B0258FB00C7D1B1 /* HTTPCommunication.m in Sources */,
+				2A143A181B02B0C300EB14C2 /* ActivityView.m in Sources */,
 				2AFD37C61B025B1100C7D1B1 /* Location.m in Sources */,
 				2AFD37CC1B025CB200C7D1B1 /* LoginViewController.m in Sources */,
 				2A402E1B1B0255530033BFB5 /* ViewController.m in Sources */,
