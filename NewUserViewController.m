@@ -132,7 +132,6 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     [self.delegate newUserViewControllerDidSignup:self];
   }];
-
   
 }
 

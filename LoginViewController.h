@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+
+@class LoginViewController;
+
 //Create custom protocol
 @protocol LoginViewControllerDelegate <NSObject>
+- (void)loginViewControllerDidLogin:(LoginViewController *)controller;
 
 
 @end
@@ -18,7 +22,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 
 - (IBAction)loginButtonPressed:(UIButton *)sender;
-
 - (IBAction)newUserButtonPressed:(UIButton *)sender;
 
 @end
