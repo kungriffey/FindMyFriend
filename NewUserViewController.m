@@ -122,16 +122,12 @@
                                                 cancelButtonTitle:nil
                                                 otherButtonTitles:@"OK", nil];
       [alertView show];
-      [ActivityView.activityIndicator stopAnimating];
-      [ActivityView removeFromSuperview];
       // Bring the keyboard back up, because they'll probably need to change something.
       [self.usernameTextField becomeFirstResponder];
       return;
     }
     
-    // Success!
-    [ActivityView.activityIndicator stopAnimating];
-    [ActivityView removeFromSuperview];
+    //Success!
     
     [self dismissViewControllerAnimated:YES completion:nil];
     [self.delegate newUserViewControllerDidSignup:self];
