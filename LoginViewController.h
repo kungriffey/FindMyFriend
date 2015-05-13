@@ -15,9 +15,11 @@
 @protocol LoginViewControllerDelegate <NSObject>
 - (void)loginViewControllerDidLogin:(LoginViewController *)controller;
 
-
 @end
 @interface LoginViewController : UIViewController <UITextFieldDelegate>
+
+@property (weak, nonatomic) id <LoginViewControllerDelegate> delegate;
+
 @property (strong, nonatomic) IBOutlet UITextField *userNameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 
