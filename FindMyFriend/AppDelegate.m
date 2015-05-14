@@ -11,6 +11,7 @@
 #import <FBSDKCoreKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 #import "LoginViewController.h"
 
 
@@ -31,6 +32,8 @@
   // Parse initialization
   [Parse setApplicationId:@"iTTRL8mKc9JszZhv9LyIClrGVR0zd2U3EoWOiwe4" clientKey:@"6fEWKJ6osKEx5v5zRwUHh2foe8q6B9eV5UrYv0ox"];
   // ****************************************************************************
+  [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
+
   
   if ([PFUser currentUser]) {
     // Present wall straight-away
@@ -52,6 +55,9 @@
                                                         openURL:url
                                               sourceApplication:sourceApplication
                                                      annotation:annotation];
+  
+  
+  
 }
 
 

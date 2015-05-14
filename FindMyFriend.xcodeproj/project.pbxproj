@@ -15,7 +15,6 @@
 		2A402E201B0255530033BFB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A402E1F1B0255530033BFB5 /* Images.xcassets */; };
 		2A402E231B0255530033BFB5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A402E211B0255530033BFB5 /* LaunchScreen.xib */; };
 		2A402E2F1B0255530033BFB5 /* FindMyFriendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A402E2E1B0255530033BFB5 /* FindMyFriendTests.m */; };
-		2A402E591B0256820033BFB5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A402E571B0256820033BFB5 /* Parse.framework */; };
 		2AFD37AA1B02572000C7D1B1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFD37A91B02572000C7D1B1 /* CoreLocation.framework */; };
 		2AFD37AC1B02572500C7D1B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFD37AB1B02572500C7D1B1 /* CoreGraphics.framework */; };
 		2AFD37AE1B02573200C7D1B1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFD37AD1B02573200C7D1B1 /* MobileCoreServices.framework */; };
@@ -92,7 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A402E591B0256820033BFB5 /* Parse.framework in Frameworks */,
 				2AFD37C81B025B2F00C7D1B1 /* MapKit.framework in Frameworks */,
 				2AFD37BC1B02579A00C7D1B1 /* libz.1.1.3.dylib in Frameworks */,
 				2AFD37BA1B02578F00C7D1B1 /* libsqlite3.dylib in Frameworks */,
