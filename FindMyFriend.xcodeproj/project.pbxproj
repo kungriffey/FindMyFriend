@@ -63,6 +63,7 @@
 		2A402E2E1B0255530033BFB5 /* FindMyFriendTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindMyFriendTests.m; sourceTree = "<group>"; };
 		2A402E561B0256820033BFB5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../../../Downloads/parse-library-1.7.2/Bolts.framework"; sourceTree = "<group>"; };
 		2A402E571B0256820033BFB5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../../../../Downloads/parse-library-1.7.2/Parse.framework"; sourceTree = "<group>"; };
+		2ACDDD3A1B0512E800F22376 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "../../../../../../Downloads/parse-library-1.7.2/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
 		2AFD37A91B02572000C7D1B1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2AFD37AB1B02572500C7D1B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2AFD37AD1B02573200C7D1B1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -184,6 +185,7 @@
 		2AFD37BD1B0257CE00C7D1B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2ACDDD3A1B0512E800F22376 /* ParseFacebookUtils.framework */,
 				2AFD37C71B025B2F00C7D1B1 /* MapKit.framework */,
 				2AFD37BB1B02579A00C7D1B1 /* libz.1.1.3.dylib */,
 				2AFD37B91B02578F00C7D1B1 /* libsqlite3.dylib */,
